@@ -13,14 +13,14 @@
 <!--显示员工信息的表格-->
 <table id="empList" border="1px" cellspacing="0" cellpadding="0" style="align-content: center;">
     <tr>
-        <th colspan="5">Employee Info</th>
+        <th colspan="5">员工信息表</th>
     </tr>
     <tr>
         <th>id</th>
-        <th>lastName</th>
-        <th>email</th>
-        <th>gender</th>
-        <th>Options(<a th:href="@{/toAdd}">Add</a>)</th>
+        <th>姓名</th>
+        <th>邮箱</th>
+        <th>性别</th>
+        <th>Options(<a th:href="@{/toAdd}">添加</a>)</th>
     </tr>
     <tr th:each="employee : ${employeeList}">
         <td th:text="${employee.id}"></td>
@@ -28,8 +28,8 @@
         <td th:text="${employee.email}"></td>
         <td th:text="${employee.gender}"></td>
         <td>
-            <a class="deleteA" @click="deleteEmployee" th:href="@{/employee/{id}(id=${employee.id})}">Delete</a>
-            <a th:href="@{/employee/{id}(id=${employee.id})}">Update</a>
+            <a class="deleteA" @click="deleteEmployee" th:href="@{/employee/{id}(id=${employee.id})}">删除</a>
+            <a th:href="@{/employee/{id}(id=${employee.id})}">更新</a>
         </td>
     </tr>
 </table>
