@@ -17,7 +17,7 @@
 
     <!--void addEmployee(Employee employee);-->
     <insert id="addEmployee">
-        INSERT INTO employees VALUES (null,#{employee.lastName},#{employee.email},#{employee.gender})
+        INSERT INTO employees VALUES (null,#{lastName},#{email},#{gender})
     </insert>
 
     <!--Employee getEmployee(Integer id);-->
